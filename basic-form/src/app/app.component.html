@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+{{ formName.value | json }}
+<head>
+  <title>Friends</title>
+
+</head>
+<body>
+<h1>Friends Book</h1>
+<form #formName="ngForm">
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="firstName">First name</label>
+      <input ngModel name="first" #firstName="ngModel" type="text" class="form-control" id="firstName">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="lastName">Last name</label>
+      <input ngModel name="last" #lastName="ngModel" type="text" class="form-control" id="lastName">
+    </div>
+  </div>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="email">E-mail</label>
+      <input ngModel name="email" #inputName="ngModel" type="text" class="form-control" id="email">
+    </div>
+    <div class="form-group col-md-2">
+      <label for="inputPhone">Phone number</label>
+      <input ngModel name="phone" #inputName="ngModel" type="text" class="form-control" id="inputPhone">
+    </div>
+    <div class="form-group col-md-4">
+      <label for="language">Favorite Language</label>
+      <select id="language" class="form-control">
+        <option selected>Choose...</option>
+        <option *ngFor="let language of languages">{{language}}</option>
+      </select>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</body>
+</html>
