@@ -41,7 +41,7 @@
     </div>
   </div>
 
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button [disabled]="formName.form.invalid" type="submit" class="btn btn-primary">Submit</button>
 </form>
 </body>
 </html>
