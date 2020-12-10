@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 {{ friendModel | json }}
 <head>
   <title>Friends</title>
@@ -8,30 +7,35 @@
 </head>
 <body>
 <h1>Friends Book</h1>
-<form #formName="ngForm">
+<form #formName="ngForm" novalidate>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="firstName">First name</label>
-      <input [(ngModel)]="friendModel.firstName" name="first" #firstName="ngModel" type="text" class="form-control" id="firstname">
+      <input [(ngModel)]="friendModel.firstName" name="first" #firstName="ngModel" type="text" class="form-control"
+             [class.error]="firstName.invalid && firstName.touched"  id="firstname" ngModel required>
     </div>
     <div class="form-group col-md-6">
       <label for="lastName">Last name</label>
-      <input [(ngModel)]="friendModel.lastName" name="last" #lastName="ngModel" type="text" class="form-control" id="lastname">
+      <input [(ngModel)]="friendModel.lastName" name="last" #lastName="ngModel" type="text" class="form-control"
+             [class.error]="lastName.invalid && lastName.touched" id="lastname" ngModel required>
     </div>
   </div>
   <div class="form-row">
     <div class="form-group col-md-6">
       <label for="email">E-mail</label>
-      <input [(ngModel)]="friendModel.email" name="email" #inputName="ngModel" type="text" class="form-control" id="email">
+      <input [(ngModel)]="friendModel.email" name="email" #email="ngModel" type="text" class="form-control"
+             [class.error]="email.invalid && email.touched" id="email" ngModel required>
     </div>
     <div class="form-group col-md-2">
       <label for="inputPhone">Phone number</label>
-      <input [(ngModel)]="friendModel.phoneNumber" name="phone" #inputName="ngModel" type="text" class="form-control" id="inputPhone">
+      <input [(ngModel)]="friendModel.phoneNumber" name="phone" #phoneNumber="ngModel" type="text" class="form-control"
+             [class.error]="phoneNumber.invalid && phoneNumber.touched"  id="inputPhone" ngModel required>
     </div>
     <div class="form-group col-md-4">
       <label for="language">Favorite Language</label>
       <select id="language" class="form-control">
         <option selected>Choose...</option>
+        <input   [class.error]="language.invalid && language.touched" #language="ngModel" type="text" ngModel required>
         <option *ngFor="let language of languages">{{language}}</option>
       </select>
     </div>
