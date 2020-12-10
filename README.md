@@ -61,20 +61,20 @@ A POST request to add a friend to your friend list.
 
 
 ### Steps
--[x] 1. Clone this repository locally
--[x] 2. Check if you have node.js and npm, if not, install them.
+ 1. Clone this repository locally
+ 2. Check if you have node.js and npm, if not, install them.
     - node: <code>node -v</code> or <code>node -version</code>
     - npm: <code>npm -v</code> or <code>npm -version</code>
--[x] 3. Install the Angular cli with <code>npm install -g @angular/cli</code> and check afterwards if you have it with <code>ng -v</code>
--[x] 4. Navigate to the root of your clone of this repository in the terminal and enter the command <code>ng new project-name</code>. You should now have 2 folders called "server", your node API, and "project-name", your angular app.
--[x] 5. Go inside of the "project-name" folder and run the command <code>ng serve --port 4500</code>. You can now check out your angular app on <code>localhost:4500</code>.
--[x] 6. In your editor, navigate to <code>project-name/src/app</code>. In here you'll find 2 things.
+ 3. Install the Angular cli with <code>npm install -g @angular/cli</code> and check afterwards if you have it with <code>ng -v</code>
+ 4. Navigate to the root of your clone of this repository in the terminal and enter the command <code>ng new project-name</code>. You should now have 2 folders called "server", your node API, and "project-name", your angular app.
+ 5. Go inside of the "project-name" folder and run the command <code>ng serve --port 4500</code>. You can now check out your angular app on <code>localhost:4500</code>.
+ 6. In your editor, navigate to <code>project-name/src/app</code>. In here you'll find 2 things.
     - The template, app.component.html
     - The component, app.component.ts. 
     - The view you see in the page is produced by the combination of that <strong>template</strong> and the <strong>component</strong> that brings the logic to the template.
     - You should never pay attention to .spec files, these are for unit testing which is out of scope for this exercise.
 7. Empty the "AppComponent" class and the template. The template file should be completely empty. Inside of the AppComponent class you'll write your logic and in the template you can use it and write the html.
--[x] 8. In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
+ 8. In the HTML file, add a form with the required inputs at least. Go take a look at the must haves to see which are required. Don't forget a submit button, make it a regular button, <strong>not an input type button</strong>!
 9. You might have already added a select input for the languages with the options inside of it. This can be optimised by putting the names of the languages inside of an array in your component class. Next, you can use the ngFor loop to generate all the options, way more efficient right?
 10. Now you will have to bind the data to your form
     - In your app.module.ts, import the FormsModule from @angular/forms. Also add it to the imports array.

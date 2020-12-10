@@ -3,10 +3,10 @@ export class Friend {
   public lastName: string;
   public email: string;
   public phoneNumber: any;
-  public language: string;
+  public language: [];
 
 
-  constructor(firstName: string, lastName: string, email: string, phoneNumber: any, language: string) {
+  constructor(firstName: string, lastName: string, email: string, phoneNumber: number, language: []) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
@@ -21,5 +21,6 @@ export class Friend {
     this.phoneNumber = phoneNumber;
   }*/
 }
+
 
 

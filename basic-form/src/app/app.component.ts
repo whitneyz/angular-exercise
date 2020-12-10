@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+
 import {Friend} from './friend';
 
 @Component({
@@ -8,7 +9,7 @@ import {Friend} from './friend';
 })
 export class AppComponent {
   languages = ['html', 'css', 'js', 'php'];
-  friend = new Friend('', '', '', null);
+  friendModel = new Friend('', '', '', 0, []);
 }
 
 
