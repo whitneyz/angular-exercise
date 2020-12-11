@@ -14,6 +14,7 @@ export class AppComponent {
   {
     console.log(this.friendModel);
   }
+
 }
 
 
