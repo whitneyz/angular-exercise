@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 import {Friend} from './friend';
 
@@ -10,7 +10,14 @@ import {Friend} from './friend';
 export class AppComponent {
   languages = ['html', 'css', 'js', 'php'];
   friendModel = new Friend('', '', '', 0, []);
+  public showFriend(): any
+  {
+    console.log(this.friendModel);
+  }
 }
+
+
+
 
 
 
