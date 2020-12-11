@@ -10,7 +10,7 @@ export class AddFriendService {
   /*post request to fetch http*/
   constructor(private http: HttpClient) {
   }
-  url = '';
+  url = 'http://localhost:9100/addFriend';
 
   /*parameter die binnenkomt moet een typehint zijn en daarnaast Observable is ook een typehint*/
   addFriend(friend: Friend): Observable<any> {
